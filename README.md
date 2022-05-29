@@ -1,6 +1,6 @@
 # bear-react-router-hash
 
-> Hash Route Additional based for React Route v6
+> Hash Route + History Route Additional based for React Route v6
 
 
 [![NPM](https://img.shields.io/npm/v/bear-react-router-hash.svg)](https://www.npmjs.com/package/bear-react-router-hash)
