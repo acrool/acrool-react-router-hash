@@ -20,7 +20,6 @@
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts",
-    "redux-first-history": "^5.0.9",
     "typescript": "link:../node_modules/typescript"
   },
   "devDependencies": {
