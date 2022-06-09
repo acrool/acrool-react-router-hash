@@ -118,14 +118,14 @@ export function useHashRoutes(
 
     if (__DEV__) {
         warning(
-            parentRoute || matches != null,
-            `No routes matched location "${location.pathname}${location.search}${location.hash}" `
+            pathname == '/' || parentRoute || matches != null,
+            `No routes matched location.hash "${location.hash}" `
         );
 
         warning(
             matches == null ||
             matches[matches.length - 1].route.element !== undefined,
-            `Matched leaf route at location "${location.pathname}${location.search}${location.hash}" does not have an element. ` +
+            `Matched leaf route at location "${location.hash}" does not have an element. ` +
             'This means it will render an <Outlet /> with a null value by default resulting in an "empty" page.'
         );
     }
