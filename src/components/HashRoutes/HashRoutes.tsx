@@ -2,7 +2,8 @@ import React from 'react';
 import {matchRoutes, RouteMatch, RouteObject, useInRouterContext, useLocation} from 'react-router-dom';
 import {parsePath} from 'history';
 import {HashRouteContext} from '../../context';
-import {invariant, warning, warningOnce, createRoutesFromChildren, joinPaths} from '../../utils';
+import {createRoutesFromChildren} from '../HashRoute';
+import {invariant, warning, warningOnce, joinPaths} from '../../utils';
 
 
 
