@@ -6,6 +6,11 @@
 [![NPM](https://img.shields.io/npm/v/bear-react-router-hash.svg)](https://www.npmjs.com/package/bear-react-router-hash)
 [![npm](https://img.shields.io/npm/dm/bear-react-router-hash.svg)](https://www.npmjs.com/package/bear-react-router-hash)
 
+## Support Version Map
+
+React | React Scripts | Bear React Grid | 
+------|---------------|----------------:|
+18    | 5.0.1         |           1.0.2 |
 
 ## Install
 
