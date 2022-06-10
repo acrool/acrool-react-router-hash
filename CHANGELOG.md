@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/imagine10255/bear-react-router-hash/compare/v1.0.2...v1.0.3) (2022-06-10)
+
+
+### Bug Fixes
+
+* fix circular dependency: src/components/HashRoute/HashRoute.tsx -> src/utils.ts ([f8c0c62](https://github.com/imagine10255/bear-react-router-hash/commit/f8c0c62e1837694075cda628a88b83814c891db7))
+
 ### [1.0.2](https://github.com/imagine10255/bear-react-router-hash/compare/v1.0.1...v1.0.2) (2022-06-09)
 
 
