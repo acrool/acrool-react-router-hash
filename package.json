@@ -45,7 +45,7 @@
     "release:major": "standard-version -r major",
     "release:minor": "standard-version -r minor",
     "release:patch": "standard-version -r patch",
-    "release:beta": "standard-version --prerelease beta"
+    "release:alpha": "standard-version --prerelease alpha"
   },
   "peerDependencies": {
     "react": "^18.1.0",
