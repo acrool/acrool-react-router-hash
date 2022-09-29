@@ -1,6 +1,6 @@
 import React from 'react';
 import {HashOutletContext, HashRouteContext} from './context';
-import {Params} from 'react-router-dom';
+import {Params, useLocation} from 'react-router-dom';
 
 
 
@@ -9,12 +9,18 @@ import {Params} from 'react-router-dom';
  * Returns the context (if provided) for the child route at this level of the route
  * hierarchy.
  * @see https://reactrouter.com/docs/en/v6/api#useoutletcontext
+ * @see https://github.com/remix-run/react-router/blob/v6.3.0/packages/react-router/lib/hooks.tsx#L203
  */
 export function useHashOutletContext<Context = unknown>(): Context {
     return React.useContext(HashOutletContext) as Context;
 }
 
 
+/**
+ * use Hash Outlet
+ * @see https://github.com/remix-run/react-router/blob/v6.3.0/packages/react-router/lib/hooks.tsx#L213
+ * @param context
+ */
 export function useHashOutlet(context?: unknown): React.ReactElement | null {
     let outlet = React.useContext(HashRouteContext).outlet;
     if (outlet) {
@@ -26,6 +32,10 @@ export function useHashOutlet(context?: unknown): React.ReactElement | null {
 }
 
 
+/**
+ * use Hash Params
+ * @see https://github.com/remix-run/react-router/blob/v6.3.0/packages/react-router/lib/hooks.tsx#L229
+ */
 export function useHashParams<
     ParamsOrKey extends string | Record<string, string | undefined> = string
     >(): Readonly<
@@ -37,3 +47,15 @@ export function useHashParams<
 }
 
 
+/**
+ * use Hash Pathname
+ * @see https://github.com/remix-run/react-router/blob/v6.3.0/packages/react-router/lib/hooks.tsx#L74
+ */
+export function useHashPathname(): string {
+    const hash = useLocation()?.hash;
+    if(hash){
+        return hash.replace('#', '');
+    }
+
+    return '';
+}

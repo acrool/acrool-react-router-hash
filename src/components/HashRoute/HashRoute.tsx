@@ -2,7 +2,11 @@ import React from 'react';
 import {IndexRouteProps, LayoutRouteProps, PathRouteProps, RouteObject} from 'react-router-dom';
 import {invariant} from '../../utils';
 
-
+/**
+ * Create Routes From Children
+ * @see https://github.com/remix-run/react-router/blob/v6.3.0//packages/react-router/lib/components.tsx#L270
+ * @param children
+ */
 export function createRoutesFromChildren(
     children: React.ReactNode
 ): RouteObject[] {
@@ -49,7 +53,12 @@ export function createRoutesFromChildren(
 }
 
 
-
+/**
+ * Hash Route
+ * @see https://github.com/remix-run/react-router/blob/v6.3.0//packages/react-router/lib/components.tsx#L144
+ * @param _props
+ * @constructor
+ */
 function HashRoute(
     _props: PathRouteProps | LayoutRouteProps | IndexRouteProps
 ): React.ReactElement | null {

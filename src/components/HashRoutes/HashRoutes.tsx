@@ -14,6 +14,13 @@ interface IProps{
 
 const __DEV__ = process.env.NODE_ENV !== 'production';
 
+
+/**
+ * renderMatches
+ * @see https://github.com/remix-run/react-router/blob/715dd233bb57a65c563edd52c4ccd63f37745ddb/packages/react-router/lib/hooks.tsx#L377
+ * @param matches
+ * @param parentMatches
+ */
 export function _renderMatches(
     matches: RouteMatch[] | null,
     parentMatches: RouteMatch[] = []
@@ -149,7 +156,8 @@ export function useHashRoutes(
 
 
 /**
- * Hash 用路由器s
+ * Hash 用路由器
+ * @see https://github.com/remix-run/react-router/blob/v6.3.0//packages/react-router/lib/components.tsx#L252
  * @param path 路由路徑
  */
 function HashRoutes({
