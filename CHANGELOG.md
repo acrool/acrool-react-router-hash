@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-alpha.0](https://github.com/imagine10255/bear-react-router-hash/compare/v1.0.3...v1.1.0-alpha.0) (2022-09-29)
+
+
+### Features
+
+* add useHashPathname and all method see url ([269ccfd](https://github.com/imagine10255/bear-react-router-hash/commit/269ccfdbda4674a6ec78145bbc3b6fd0815590a0))
+
 ### [1.0.3](https://github.com/imagine10255/bear-react-router-hash/compare/v1.0.2...v1.0.3) (2022-06-10)
 
 
