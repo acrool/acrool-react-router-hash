@@ -1,9 +1,9 @@
 import React from 'react';
 import {matchRoutes, RouteMatch, RouteObject, useInRouterContext, useLocation} from 'react-router-dom';
 import {parsePath} from 'history';
-import {HashRouteContext} from '../../context';
+import {HashRouteContext} from '../context';
 import {createRoutesFromChildren} from '../HashRoute';
-import {invariant, warning, warningOnce, joinPaths} from '../../utils';
+import {invariant, warning, warningOnce, joinPaths} from '../utils';
 
 
 
@@ -126,7 +126,7 @@ export function useHashRoutes(
 
     if (__DEV__) {
         warning(
-            pathname == '/' || parentRoute || matches != null,
+            pathname === '/' || parentRoute || matches !== null,
             `No routes matched location.hash "${location.hash}" `
         );
 

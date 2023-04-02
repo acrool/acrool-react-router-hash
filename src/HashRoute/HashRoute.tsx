@@ -1,6 +1,6 @@
 import React from 'react';
 import {IndexRouteProps, LayoutRouteProps, PathRouteProps, RouteObject} from 'react-router-dom';
-import {invariant} from '../../utils';
+import {invariant} from '../utils';
 
 /**
  * Create Routes From Children

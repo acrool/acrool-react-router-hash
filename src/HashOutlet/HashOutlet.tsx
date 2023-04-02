@@ -1,6 +1,6 @@
 import React from 'react';
 import {OutletProps} from 'react-router-dom';
-import {useHashOutlet} from '../../hooks';
+import {useHashOutlet} from '../hooks';
 
 
 /**
