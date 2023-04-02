@@ -15,7 +15,6 @@
     "type": "git",
     "url": "https://github.com/imagine10255/bear-react-router-hash.git"
   },
-  "homepage": "https://imagine10255.github.io/bear-react-router-hash",
   "type": "module",
   "module": "./dist/bear-react-router-hash.es.js",
   "types": "./dist/index.d.ts",
