@@ -21,8 +21,7 @@
   "exports": {
     ".": {
       "import": "./dist/bear-react-router-hash.es.js"
-    },
-    "./dist/index.css": "./dist/style.css"
+    }
   },
   "files": [
     "dist"
