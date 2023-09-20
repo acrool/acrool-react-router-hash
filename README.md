@@ -6,7 +6,7 @@
 [![NPM](https://img.shields.io/npm/v/bear-react-router-hash.svg)](https://www.npmjs.com/package/bear-react-router-hash)
 [![npm](https://img.shields.io/npm/dm/bear-react-router-hash.svg)](https://www.npmjs.com/package/bear-react-router-hash)
 
-> with react-router-dom version 6.3.0 
+> with react-router-dom version 6.x 
 
 
 ## Install
