@@ -1,10 +1,18 @@
 # bear-react-router-hash
 
-> Hash Route + History Route Additional based for React Route v6
+<p align="center">
+    Hash Route + History Route Additional based for React Route v6
+</p>
 
+<div align="center">
 
-[![NPM](https://img.shields.io/npm/v/bear-react-router-hash.svg)](https://www.npmjs.com/package/bear-react-router-hash)
-[![npm](https://img.shields.io/npm/dm/bear-react-router-hash.svg)](https://www.npmjs.com/package/bear-react-router-hash)
+[![NPM](https://img.shields.io/npm/v/bear-react-router.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router)
+[![npm downloads](https://img.shields.io/npm/dm/bear-react-router.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router)
+[![npm](https://img.shields.io/npm/dt/bear-react-router.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router)
+[![npm](https://img.shields.io/npm/l/bear-react-router?style=for-the-badge)](https://github.com/imagine10255/bear-react-router/blob/main/LICENSE)
+
+</div>
+
 
 > with react-router-dom version 6.x 
 
