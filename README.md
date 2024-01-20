@@ -6,10 +6,10 @@
 
 <div align="center">
 
-[![NPM](https://img.shields.io/npm/v/bear-react-router.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router)
-[![npm downloads](https://img.shields.io/npm/dm/bear-react-router.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router)
-[![npm](https://img.shields.io/npm/dt/bear-react-router.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router)
-[![npm](https://img.shields.io/npm/l/bear-react-router?style=for-the-badge)](https://github.com/imagine10255/bear-react-router/blob/main/LICENSE)
+[![NPM](https://img.shields.io/npm/v/bear-react-router-hash.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router-hash)
+[![npm downloads](https://img.shields.io/npm/dm/bear-react-router-hash.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router-hash)
+[![npm](https://img.shields.io/npm/dt/bear-react-router-hash.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router-hash)
+[![npm](https://img.shields.io/npm/l/bear-react-router-hash?style=for-the-badge)](https://github.com/imagine10255/bear-react-router-hash/blob/main/LICENSE)
 
 </div>
 
