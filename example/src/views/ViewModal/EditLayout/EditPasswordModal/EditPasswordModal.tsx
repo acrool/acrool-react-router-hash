@@ -1,16 +1,17 @@
 import React from 'react';
-import {useHashParams, useHashPathname} from 'bear-react-router-hash';
 import {useNavigate} from 'react-router-dom';
+import {useHashParams, useHashPathname} from '@acrool/react-router-hash';
 
-const EditAccount = () => {
+const EditPasswordModal = () => {
     const {id} = useHashParams<{id: string}>();
     const navigate = useNavigate();
     const pathname = useHashPathname();
+
     return <>
-        <p>pathname: {pathname}</p>
-        <p>Edit Account Modal id: {id}</p>
+        <p>hash pathname: {pathname}</p>
+        <p>useHashParams id: {id}</p>
         <button type="button" onClick={() => navigate({hash: undefined})}>Close HashModal</button>
     </>;
 };
 
-export default EditAccount;
+export default EditPasswordModal;

@@ -1,4 +1,8 @@
-# bear-react-router-hash
+# Acrool React Router Hash
+
+<a href="https://acrool-react-router-hash.pages.dev/" title="Acrool React Router Hash - Hash Route + History Route Additional based for React Route v6">
+    <img src="https://acrool-react-router-hash.pages.dev/og.webp" alt="Acrool React Router Hash Logo"/>
+</a>
 
 <p align="center">
     Hash Route + History Route Additional based for React Route v6
@@ -6,13 +10,15 @@
 
 <div align="center">
 
-[![NPM](https://img.shields.io/npm/v/bear-react-router-hash.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router-hash)
-[![npm downloads](https://img.shields.io/npm/dm/bear-react-router-hash.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router-hash)
-[![npm](https://img.shields.io/npm/dt/bear-react-router-hash.svg?style=for-the-badge)](https://www.npmjs.com/package/bear-react-router-hash)
-[![npm](https://img.shields.io/npm/l/bear-react-router-hash?style=for-the-badge)](https://github.com/imagine10255/bear-react-router-hash/blob/main/LICENSE)
+[![NPM](https://img.shields.io/npm/v/@acrool/react-router-hash.svg?style=for-the-badge)](https://www.npmjs.com/package/@acrool/react-router-hash)
+[![npm](https://img.shields.io/bundlejs/size/@acrool/react-router-hash?style=for-the-badge)](https://github.com/acrool/@acrool/react-router-hash/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/l/@acrool/react-router-hash?style=for-the-badge)](https://github.com/acrool/react-router-hash/blob/main/LICENSE)
+
+[![npm downloads](https://img.shields.io/npm/dm/@acrool/react-router-hash.svg?style=for-the-badge)](https://www.npmjs.com/package/@acrool/react-router-hash)
+[![npm](https://img.shields.io/npm/dt/@acrool/react-router-hash.svg?style=for-the-badge)](https://www.npmjs.com/package/@acrool/react-router-hash)
+
 
 </div>
-
 
 > with react-router-dom version 6.x 
 
@@ -20,7 +26,7 @@
 ## Install
 
 ```bash
-yarn add bear-react-router-hash
+yarn add @acrool/react-router-hash
 ```
 
 ## Usage
@@ -28,7 +34,7 @@ yarn add bear-react-router-hash
 
 ```tsx
 import {Route, Routes, useLocation} from 'react-router-dom';
-import {HashRoutes, HashRoute} from 'bear-react-router-hash';
+import {HashRoutes, HashRoute} from '@acrool/react-router-hash';
 import {unstable_HistoryRouter as Router} from "react-router-dom";
 
 const history = createBrowserHistory({window});
@@ -58,7 +64,7 @@ const MainRouter = () => {
 };
 
 
-import {useHashParams} from 'bear-react-router-hash';
+import {useHashParams} from '@acrool/react-router-hash';
 
 
 const Dashboard = () => {
@@ -74,8 +80,12 @@ const Dashboard = () => {
 
 const EditAccount = () => {
     const {id} = useHashParams<{id: string}>();
+    const navigate = useNavigate();
+    const pathname = useHashPathname();
+    
     return <>
-        <p>EditAccount Modal id: {id}</p>
+        <p>hash pathname: {pathname}</p>
+        <p>useHashParams id: {id}</p>
         <button type="button" onClick={() => navigate({hash: undefined})}>Close HashModal</button>
     </>;
 };
@@ -84,4 +94,4 @@ const EditAccount = () => {
 
 ## License
 
-MIT © [imagine10255](https://github.com/imagine10255)
+MIT © [Acrool](https://github.com/acrool) & [Imagine](https://github.com/imagine10255)

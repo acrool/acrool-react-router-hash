@@ -20,7 +20,7 @@ export default defineConfig({
         lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
             formats: ['es'],
-            fileName: (format) => `bear-react-router-hash.${format}.js`,
+            fileName: (format) => `acrool-react-router-hash.${format}.js`,
         },
         cssTarget: 'chrome61',
         rollupOptions: {

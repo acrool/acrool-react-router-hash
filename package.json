@@ -1,5 +1,5 @@
 {
-  "name": "bear-react-router-hash",
+  "name": "acrool-react-router-hash",
   "version": "3.1.0",
   "description": "Hash Route + History Route Additional based for React Route v6",
   "keywords": [
@@ -13,14 +13,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/imagine10255/bear-react-router-hash.git"
+    "url": "https://github.com/acrool/acrool-react-router-hash.git"
   },
   "type": "module",
-  "module": "./dist/bear-react-router-hash.es.js",
+  "module": "./dist/acrool-react-router-hash.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/bear-react-router-hash.es.js"
+      "import": "./dist/acrool-react-router-hash.es.js"
     }
   },
   "files": [

@@ -1,14 +1,12 @@
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import {Route, Routes, useLocation, unstable_HistoryRouter as Router} from 'react-router-dom';
-import {HashRoutes, HashRoute} from 'bear-react-router-hash';
+import {HashRoutes, HashRoute} from '@acrool/react-router-hash';
 import {createBrowserHistory} from 'history';
+import Github from './assets/github.svg?react';
 
 
-import EditAccount from './views/ViewModal/EditLayout/EditAccount';
+import EditAccountModal from './views/ViewModal/EditLayout/EditAccountModal';
 import EditLayout from './views/ViewModal/EditLayout/EditLayout';
-import EditPassword from './views/ViewModal/EditLayout/EditPassword';
-import Login from './views/ViewModal/EditLayout/Login';
+import EditPasswordModal from './views/ViewModal/EditLayout/EditPasswordModal';
 import NotFound from './views/NotFound';
 import Dashboard from './views/Dashboard';
 
@@ -31,12 +29,10 @@ const MainRouter = () => {
 
         {/*<MyTest/>*/}
         <HashRoutes>
-            <HashRoute path="login" element={<Login/>}/>
-
             {/*個人各式資訊頁面*/}
             <HashRoute path="control/*" element={<EditLayout/>}>
-                <HashRoute path="editAccount/:id" element={<EditAccount/>}/>
-                <HashRoute path="editPassword/:id" element={<EditPassword/>}/>
+                <HashRoute path="editAccount/:id" element={<EditAccountModal/>}/>
+                <HashRoute path="editPassword/:id" element={<EditPasswordModal/>}/>
             </HashRoute>
         </HashRoutes>
 
@@ -46,29 +42,29 @@ const MainRouter = () => {
 
 function App() {
 
+    const renderHeader = () => {
+
+        const repositoryUrl = 'https://github.com/acrool/acrool-react-router-hash';
+        const name = 'Acrool React Router Hash';
+
+        return <>
+            <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">
+                <Github width={40} height={40}/>
+            </a>
+
+            <div className="banner-wrapper">
+                <img src="/logo.svg" alt={name}/>
+                <h1>{name}</h1>
+            </div>
+        </>;
+    };
+
+
     return (
         <div className="App">
-            <div>
-                <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
+            {renderHeader()}
 
-                <MainRouter/>
-
-
-                <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-            </p>
+            <MainRouter/>
         </div>
     );
 }

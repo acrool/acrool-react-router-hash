@@ -1,4 +1,5 @@
 #root {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +40,25 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+
+.banner-wrapper{
+  text-align: center;
+  border: 1px solid rgb(96 96 96 / 30%);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px 0;
+}
+.banner-wrapper > img{
+  height: 100px;
+}
+.banner-wrapper > h1{
+  font-size: 40px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 0;
 }
