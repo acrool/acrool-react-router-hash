@@ -1,4 +1,5 @@
-import {Route, Routes, useLocation, unstable_HistoryRouter as Router} from 'react-router-dom';
+import {Route, Routes, BrowserRouter as Router} from 'react-router-dom';
+
 import {HashRoutes, HashRoute} from '@acrool/react-router-hash';
 import {createBrowserHistory} from 'history';
 import Github from './assets/github.svg?react';
@@ -14,10 +15,11 @@ import './App.css';
 
 
 const history = createBrowserHistory({window});
+const originalHistory = createBrowserHistory();
 
 
 const MainRouter = () => {
-    return <Router history={history}>
+    return <Router>
 
         <Routes>
             <Route path="/" element={<Dashboard/>} />
