@@ -23,6 +23,13 @@
 > with react-router-dom version 6.x 
 
 
+## Features
+
+- With react-router-dom version 6.x
+- In CSR, it is easy to implement the light box routing function
+- Modified and enhanced HashRouter function by react-router-dom, supports path params
+- Extract the shared optical box to the router to separate dependencies
+
 ## Install
 
 ```bash
@@ -90,6 +97,12 @@ const EditAccount = () => {
     </>;
 };
 ```
+
+
+There is also a example that you can play with it:
+
+[![Play react-editext-example](https://raw.githubusercontent.com/acrool/acrool-react-router-hash/main/play-in-example-button.svg)](https://acrool-react-router-hash.pages.dev)
+
 
 
 ## License
