@@ -10,6 +10,11 @@ interface IProps {
 
 
 
+const repositoryUrl = 'https://github.com/acrool/acrool-react-router-hash';
+const name = 'Acrool React Router Hash';
+
+
+
 const Banner = ({
     className,
 }: IProps) => {
@@ -30,11 +35,6 @@ const Banner = ({
                 link.click();
             });
     };
-
-
-    const repositoryUrl = 'https://github.com/acrool/acrool-react-hooks';
-    const name = 'Acrool React Router Hash';
-
 
     return <BannerRoot className={className}>
         <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">
