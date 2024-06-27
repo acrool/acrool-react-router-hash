@@ -13,11 +13,13 @@
   "dependencies": {
     "@acrool/react-router-hash": "link:..",
     "@types/styled-components": "^5.1.26",
+    "@types/dom-to-image": "^2.6.7",
     "history": "^5.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "6.16.0",
-    "styled-components": "5.3.9"
+    "styled-components": "5.3.9",
+    "dom-to-image": "^2.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

@@ -1,7 +1,7 @@
 # Acrool React Router Hash
 
 <a href="https://acrool-react-router-hash.pages.dev/" title="Acrool React Router Hash - Hash Route + History Route Additional based for React Route v6">
-    <img src="https://acrool-react-router-hash.pages.dev/og.webp" alt="Acrool React Router Hash Logo"/>
+    <img src="https://raw.githubusercontent.com/acrool/acrool-react-router-hash/main/example/public/og.webp" alt="Acrool React Router Hash Logo"/>
 </a>
 
 <p align="center">
