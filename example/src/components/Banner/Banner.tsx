@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {useRef} from 'react';
 import domtoimage from 'dom-to-image';
 import Github from '../../assets/github.svg?react';
+import {media} from "@acrool/react-grid";
 
 
 interface IProps {
@@ -40,7 +41,7 @@ const Banner = ({
         <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">
             <Github width={40} height={40}/>
         </a>
-        <DownloadButton type="button" onClick={downloadBanner}>Download Banner</DownloadButton>
+        {/*<DownloadButton type="button" onClick={downloadBanner}>Download Banner</DownloadButton>*/}
 
         <DownloadWrapper ref={ref}>
             <img src="/logo.svg" alt={name}/>
@@ -61,21 +62,35 @@ const DownloadWrapper = styled.div`
   justify-content: center;
   padding: 20px;
   height: 200px;
-  width: 920px;
+  max-width: 920px;
+  width: 100%;
   gap: 12px;
   background-color: #000;
-  
+
   > img{
     height: 100px;
   }
-  
+
   > h1{
-    font-size: 40px;
+    word-wrap:break-word;
+
+    font-size: 16px;
     color: #fff;
     font-weight: 700;
     line-height: 0;
   }
+
+  ${media.sm`
+    > h1{
+        font-size: 40px;
+        color: #fff;
+        font-weight: 700;
+        line-height: 0;
+      }
+
+  `}
 `;
+
 
 
 const DownloadButton = styled.button`

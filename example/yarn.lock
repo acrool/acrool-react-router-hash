@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@acrool/react-grid@5.2.2":
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/@acrool/react-grid/-/react-grid-5.2.2.tgz#8de39e0709625ce22c024a587bc2d632edbd38a5"
+  integrity sha512-23+iQrn9tgHW0Bg8oHtbtoxQoruFg2AoEHUCsqklRYjxZdXj0Nik32SfJ1svhGdLIzNwD0GSdl2GrQ5qNKncGA==
+
 "@acrool/react-router-hash@link:..":
   version "0.0.0"
   uid ""
