@@ -74,7 +74,7 @@ const DownloadWrapper = styled.div`
   > h1{
     word-wrap:break-word;
 
-    font-size: 16px;
+    font-size: 20px;
     color: #fff;
     font-weight: 700;
     line-height: 0;
