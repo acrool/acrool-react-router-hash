@@ -36,11 +36,7 @@ export function useHashOutlet(context?: unknown): React.ReactElement | null {
  * use Hash Params
  * @see https://github.com/remix-run/react-router/blob/v6.3.0/packages/react-router/lib/hooks.tsx#L229
  */
-export function useHashParams<
-    ParamsOrKey extends string | Record<string, string | undefined> = string
-    >(): Readonly<
-    [ParamsOrKey] extends [string] ? Params<ParamsOrKey> : Partial<ParamsOrKey>
-    > {
+export function useHashParams<Params extends { [K in keyof Params]?: string } = {}>(): Params {
     let {matches} = React.useContext(HashRouteContext);
     let routeMatch = matches[matches.length - 1];
     return routeMatch ? (routeMatch.params as any) : {};
