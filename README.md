@@ -29,6 +29,7 @@
 - In CSR, it is easy to implement the light box routing function
 - Modified and enhanced HashRouter function by react-router-dom, supports path params
 - Extract the shared optical box to the router to separate dependencies
+- With [@acrool/react-modal](https://github.com/acrool/acrool-react-modal) to support persistent lightbox
 
 ## Install
 
