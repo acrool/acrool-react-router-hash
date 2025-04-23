@@ -22,6 +22,8 @@
 
 > with react-router-dom version 6.x 
 
+`^3.2.0 support react >=18.0.0 <20.0.0`
+
 
 ## Features
 
