@@ -1,6 +1,6 @@
 {
   "name": "@acrool/react-router-hash",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "Hash Route + History Route Additional based for React Route v6",
   "keywords": [
     "react",
