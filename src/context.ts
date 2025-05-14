@@ -2,8 +2,8 @@ import React from 'react';
 import {RouteMatch} from 'react-router-dom';
 
 interface HashRouteContextObject {
-    outlet: React.ReactElement | null;
-    matches: RouteMatch[];
+    outlet: React.ReactElement | null
+    matches: RouteMatch[]
 }
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import {HashOutletContext, HashRouteContext} from './context';
 import {Params, useLocation} from 'react-router-dom';
+
+import {HashOutletContext, HashRouteContext} from './context';
 
 
 
@@ -39,7 +40,7 @@ export function useHashOutlet(context?: unknown): React.ReactElement | null {
 export function useHashParams<Params extends { [K in keyof Params]?: string } = {}>(): Params {
     let {matches} = React.useContext(HashRouteContext);
     let routeMatch = matches[matches.length - 1];
-    return routeMatch ? (routeMatch.params as any) : {};
+    return routeMatch ? (routeMatch.params as any) : {} as any;
 }
 
 

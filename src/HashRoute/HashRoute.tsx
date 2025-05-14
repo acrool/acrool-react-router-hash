@@ -1,5 +1,6 @@
 import React from 'react';
 import {IndexRouteProps, LayoutRouteProps, PathRouteProps, RouteObject} from 'react-router-dom';
+
 import {invariant} from '../utils';
 
 /**
@@ -23,7 +24,7 @@ export function createRoutesFromChildren(
             // Transparently support React.Fragment and its children.
             routes.push.apply(
                 routes,
-                createRoutesFromChildren(element.props.children)
+                createRoutesFromChildren((element.props as any).children)
             );
             return;
         }
@@ -36,14 +37,14 @@ export function createRoutesFromChildren(
         );
 
         let route: RouteObject = {
-            caseSensitive: element.props.caseSensitive,
-            element: element.props.element,
-            index: element.props.index,
-            path: element.props.path,
+            caseSensitive: (element.props as any).caseSensitive,
+            element: (element.props as any).element,
+            index: (element.props as any).index,
+            path: (element.props as any).path,
         };
 
-        if (element.props.children) {
-            route.children = createRoutesFromChildren(element.props.children);
+        if ((element.props as any).children) {
+            route.children = createRoutesFromChildren((element.props as any).children);
         }
 
         routes.push(route);

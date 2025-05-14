@@ -1,15 +1,16 @@
+import {parsePath} from 'history';
 import React from 'react';
 import {matchRoutes, RouteMatch, RouteObject, useInRouterContext, useLocation} from 'react-router-dom';
-import {parsePath} from 'history';
+
 import {HashRouteContext} from '../context';
 import {createRoutesFromChildren} from '../HashRoute';
-import {invariant, warning, warningOnce, joinPaths} from '../utils';
+import {invariant, joinPaths,warning, warningOnce} from '../utils';
 
 
 
 interface IProps{
-    children?: React.ReactNode;
-    location?: Partial<Location> | string;
+    children?: React.ReactNode
+    location?: Partial<Location> | string
 }
 
 const __DEV__ = process.env.NODE_ENV !== 'production';
