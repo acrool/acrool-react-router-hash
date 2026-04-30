@@ -1,5 +1,5 @@
 import React from 'react';
-import {IndexRouteProps, LayoutRouteProps, PathRouteProps, RouteObject} from 'react-router-dom';
+import {IndexRouteProps, LayoutRouteProps, PathRouteProps, RouteObject} from 'react-router';
 
 import {invariant} from '../utils';
 

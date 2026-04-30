@@ -1,5 +1,5 @@
 import React from 'react';
-import {RouteMatch} from 'react-router-dom';
+import {RouteMatch} from 'react-router';
 
 interface HashRouteContextObject {
     outlet: React.ReactElement | null

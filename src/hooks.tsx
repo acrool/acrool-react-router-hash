@@ -1,5 +1,5 @@
 import React from 'react';
-import {Params, useLocation} from 'react-router-dom';
+import {Params, useLocation} from 'react-router';
 
 import {HashOutletContext, HashRouteContext} from './context';
 

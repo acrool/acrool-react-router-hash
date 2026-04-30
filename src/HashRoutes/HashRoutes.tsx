@@ -1,5 +1,5 @@
 import React from 'react';
-import {matchRoutes, parsePath, RouteMatch, RouteObject, useInRouterContext, useLocation} from 'react-router-dom';
+import {matchRoutes, parsePath, RouteMatch, RouteObject, useInRouterContext, useLocation} from 'react-router';
 
 import {HashRouteContext} from '../context';
 import {createRoutesFromChildren} from '../HashRoute';
