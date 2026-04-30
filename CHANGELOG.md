@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/acrool/acrool-react-router-hash/compare/v4.0.0...v4.0.1) (2026-04-30)
+
+
+### Bug Fixes
+
+* update react-router dependency and replace react-router-dom with react-router in package.json and yarn.lock ([4efb07a](https://github.com/acrool/acrool-react-router-hash/commit/4efb07a3937e20e992e5a568af5bf876c0ae8ab2))
+
 ## [4.0.0](https://github.com/acrool/acrool-react-router-hash/compare/v3.2.3...v4.0.0) (2026-04-30)
 
 ## [5.0.0](https://github.com/acrool/acrool-react-router-hash/compare/v3.2.3...v5.0.0) (2026-04-30)
