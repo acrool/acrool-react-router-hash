@@ -1,11 +1,11 @@
 # Acrool React Router Hash
 
-<a href="https://acrool-react-router-hash.pages.dev/" title="Acrool React Router Hash - Hash Route + History Route Additional based for React Route v6">
+<a href="https://acrool-react-router-hash.pages.dev/" title="Acrool React Router Hash - Hash Route + History Route Additional based for React Router v7">
     <img src="https://raw.githubusercontent.com/acrool/acrool-react-router-hash/main/example/public/og.webp" alt="Acrool React Router Hash Logo"/>
 </a>
 
 <p align="center">
-    Hash Route + History Route Additional based for React Route v6
+    Hash Route + History Route Additional based for React Router v7
 </p>
 
 <div align="center">
@@ -20,15 +20,18 @@
 
 </div>
 
-> with react-router-dom version 6.x 
+> with react-router-dom version 7.x
 
-`^3.2.0 support react >=18.0.0 <20.0.0`
+`^4.0.0 support react-router-dom >=7.0.0`, `react >=18.0.0 <20.0.0`
+
+`^3.2.0 support react-router-dom 6.x`, `react >=18.0.0 <20.0.0`
 
 
 ## Features
 
-- With react-router-dom version 6.x
+- With react-router-dom version 7.x
 - In CSR, it is easy to implement the light box routing function
+- Supports both JSX mode and object mode route definitions
 - Modified and enhanced HashRouter function by react-router-dom, supports path params
 - Extract the shared optical box to the router to separate dependencies
 - With [@acrool/react-modal](https://github.com/acrool/acrool-react-modal) to support persistent lightbox
@@ -41,26 +44,22 @@ yarn add @acrool/react-router-hash
 
 ## Usage
 
+### JSX Mode
 
 ```tsx
-import {Route, Routes, useLocation} from 'react-router-dom';
-import {HashRoutes, HashRoute} from '@acrool/react-router-hash';
-import {unstable_HistoryRouter as Router} from "react-router-dom";
-
-const history = createBrowserHistory({window});
-
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {HashRoute, HashRoutes, useHashParams, useHashPathname} from '@acrool/react-router-hash';
 
 const MainRouter = () => {
-    return <Router history={history}>
+    return <Router>
 
         {/* Base pathname */}
         <Routes>
-            <Route path="/" element={<Dashboard/>} />
+            <Route path="/" element={<Dashboard/>}/>
             <Route path="*" element={<NotFound/>}/>
         </Routes>
 
-
-        {/* Hash pathname*/}
+        {/* Hash pathname */}
         <HashRoutes>
             <HashRoute path="login" element={<Login/>}/>
 
@@ -70,21 +69,79 @@ const MainRouter = () => {
             </HashRoute>
         </HashRoutes>
 
-    </Router>
+    </Router>;
 };
+```
 
+### Object Mode
 
-import {useHashParams} from '@acrool/react-router-hash';
+```tsx
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {HashRoutes} from '@acrool/react-router-hash';
 
+const MainRouter = () => {
+    return <Router>
+
+        {/* Base pathname */}
+        <Routes>
+            <Route path="/" element={<Dashboard/>}/>
+            <Route path="*" element={<NotFound/>}/>
+        </Routes>
+
+        {/* Hash pathname — object mode */}
+        <HashRoutes routes={[
+            {path: 'login', element: <Login/>},
+            {
+                path: 'control/*',
+                element: <EditLayout/>,
+                children: [
+                    {path: 'editAccount/:id', element: <EditAccount/>},
+                    {path: 'editPassword', element: <EditPassword/>},
+                ],
+            },
+        ]}/>
+
+    </Router>;
+};
+```
+
+### Hook Mode
+
+```tsx
+import {useHashRoutes} from '@acrool/react-router-hash';
+
+const HashRouter = () => {
+    return useHashRoutes([
+        {path: 'login', element: <Login/>},
+        {
+            path: 'control/*',
+            element: <EditLayout/>,
+            children: [
+                {path: 'editAccount/:id', element: <EditAccount/>},
+                {path: 'editPassword', element: <EditPassword/>},
+            ],
+        },
+    ]);
+};
+```
+
+### Navigate & Hooks
+
+```tsx
+import {useNavigate} from 'react-router-dom';
+import {useHashParams, useHashPathname} from '@acrool/react-router-hash';
 
 const Dashboard = () => {
     const navigate = useNavigate();
 
-    return  <div>
+    return <div>
         <h2>Dashboard</h2>
-        <p>This page dashboard.</p>
-        <button type="button" onClick={() => navigate({hash: '/control/editAccount/1'})}>EditAccount HashModal</button>
-        <button type="button" onClick={() => navigate({hash: '/control/editPassword'})}>EditPassword HashModal</button>
+        <button type="button" onClick={() => navigate({hash: '/control/editAccount/1'})}>
+            EditAccount HashModal
+        </button>
+        <button type="button" onClick={() => navigate({hash: '/control/editPassword'})}>
+            EditPassword HashModal
+        </button>
     </div>;
 };
 
@@ -92,7 +149,7 @@ const EditAccount = () => {
     const {id} = useHashParams<{id: string}>();
     const navigate = useNavigate();
     const pathname = useHashPathname();
-    
+
     return <>
         <p>hash pathname: {pathname}</p>
         <p>useHashParams id: {id}</p>
@@ -100,7 +157,6 @@ const EditAccount = () => {
     </>;
 };
 ```
-
 
 There is also a example that you can play with it:
 

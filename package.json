@@ -1,14 +1,13 @@
 {
   "name": "@acrool/react-router-hash",
-  "version": "3.2.3",
-  "description": "Hash Route + History Route Additional based for React Route v6",
+  "version": "4.0.0",
+  "description": "Hash Route + History Route Additional based for React Router v7",
   "keywords": [
     "react",
     "typescript",
     "react-route",
     "hash-route"
   ],
-  "private": false,
   "author": "imagine10255",
   "license": "MIT",
   "repository": {
@@ -49,11 +48,9 @@
   "peerDependencies": {
     "react": ">=18.0.0 <20.0.0",
     "react-dom": ">=18.0.0 <20.0.0",
-    "react-router-dom": "6.x"
+    "react-router-dom": "7.x"
   },
   "devDependencies": {
-    "react-router-dom": "6.16.0",
-    "@types/react-router-dom": "5.3.3",
     "@stylistic/eslint-plugin-ts": "^3.0.1",
     "@swc/jest": "^0.2.27",
     "@testing-library/dom": "10.3.1",
@@ -77,6 +74,7 @@
     "npm-run-all": "^4.1.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-router-dom": "7.14.2",
     "rollup-plugin-visualizer": "^5.9.0",
     "sass": "^1.87.0",
     "standard-version": "^9.5.0",

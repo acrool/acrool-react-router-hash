@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 `@acrool/react-router-hash` 是一個基於 React Router v6 的擴充套件，讓開發者能在 History Route（pathname）之外，同時使用 URL hash（`#`）作為額外的路由層，常見用途是 CSR lightbox / modal 路由。
 
-Peer dependencies: `react >=18 <20`, `react-router-dom 6.x`
+Peer dependencies: `react >=18 <20`, `react-router-dom 7.x`
 
 ## Commands
 

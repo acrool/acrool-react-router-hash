@@ -1,6 +1,6 @@
 import {Route, Routes, BrowserRouter as Router} from 'react-router-dom';
 
-import {HashRoutes, HashRoute} from '@acrool/react-router-hash';
+import {HashRoutes, HashRoute, useHashRoutes} from '@acrool/react-router-hash';
 
 
 import EditAccountModal from './views/ViewModal/EditLayout/EditAccountModal';
@@ -11,11 +11,7 @@ import Dashboard from './views/Dashboard';
 
 import './App.css';
 import Banner from './components/Banner';
-import {createBrowserHistory} from 'history';
 import {GridThemeProvider} from '@acrool/react-grid';
-
-
-const history = createBrowserHistory({window});
 
 
 const MainRouter = () => {
@@ -29,14 +25,27 @@ const MainRouter = () => {
         </Routes>
 
 
-        {/*<MyTest/>*/}
+        {/* JSX mode */}
+        {/*
         <HashRoutes>
-            {/*個人各式資訊頁面*/}
             <HashRoute path="control/*" element={<EditLayout/>}>
                 <HashRoute path="editAccount/:id" element={<EditAccountModal/>}/>
                 <HashRoute path="editPassword/:id" element={<EditPasswordModal/>}/>
             </HashRoute>
         </HashRoutes>
+        */}
+
+        {/* Object mode — equivalent to the JSX block above */}
+        <HashRoutes routes={[
+            {
+                path: 'control/*',
+                element: <EditLayout/>,
+                children: [
+                    {path: 'editAccount/:id', element: <EditAccountModal/>},
+                    {path: 'editPassword/:id', element: <EditPasswordModal/>},
+                ],
+            },
+        ]} />
 
     </Router>;
 };

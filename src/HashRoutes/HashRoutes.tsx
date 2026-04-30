@@ -1,6 +1,5 @@
-import {parsePath} from 'history';
 import React from 'react';
-import {matchRoutes, RouteMatch, RouteObject, useInRouterContext, useLocation} from 'react-router-dom';
+import {matchRoutes, parsePath, RouteMatch, RouteObject, useInRouterContext, useLocation} from 'react-router-dom';
 
 import {HashRouteContext} from '../context';
 import {createRoutesFromChildren} from '../HashRoute';
@@ -10,6 +9,7 @@ import {invariant, joinPaths,warning, warningOnce} from '../utils';
 
 interface IProps{
     children?: React.ReactNode
+    routes?: RouteObject[]
     location?: Partial<Location> | string
 }
 
@@ -163,9 +163,10 @@ export function useHashRoutes(
  */
 function HashRoutes({
     children,
+    routes,
     location,
 }: IProps) {
-    const data = createRoutesFromChildren(children);
+    const data = routes ?? createRoutesFromChildren(children);
     return useHashRoutes(data, location);
 }
 
