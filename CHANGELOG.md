@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/acrool/acrool-react-router-hash/compare/v3.2.3...v5.0.0) (2026-04-30)
+
 ### [3.2.3](https://github.com/acrool/acrool-react-router-hash/compare/v3.2.2...v3.2.3) (2025-05-14)
 
 ### [3.2.2](https://github.com/acrool/acrool-react-router-hash/compare/v3.2.1...v3.2.2) (2025-04-26)
